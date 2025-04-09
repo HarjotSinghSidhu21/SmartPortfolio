@@ -439,51 +439,78 @@
                 border-radius: 60% 31% 66% 34% / 21% 30% 70% 79%;
             }
         }
-
-<!-- SERVICE SECTION -->
-
-    <section id="services" class="services">
-        <div class="main-text">
-            <span>What i will do for you</span>
-            <h2>My Services</h2>
-        </div>
+/* SERVICE SECTION */
 
 
-        <div class="section-services">
-            <div class="service-box">
-                <i class='bx bxs-layer service-icon'></i>
-                <h3>UI/UX Designer</h3>
-                <p>
-                    I design user-friendly websites and apps that are easy to use and look great. My goal is to make digital experiences enjoyable and simple for everyone.
-                </p>
-                <div class="btn-box service-btn">
-                    <a href="service_1.html" class="btn">Read More</a>
-                </div>
-            </div>
-        
+.main-text{
+ width: 100%;
+ text-align: center;
+ margin-bottom: 2rem;
+ color: var(--hover-color);
+}
 
-                <div class="service-box">
-                    <i class='bx bx-code-alt service-icon' ></i>
-                    <h3>Web Developer</h3>
-                    <p>
-                        I build responsive, eye-catching websites that work smoothly on all devices. I focus on clean code and interactive features to create sites that are fast and easy to navigate.
-                    </p>
-                    <div class="btn-box service-btn">
-                        <a href="service_2.html" class="btn">Read More</a>
-                    </div>
-                </div>
-            
+.main-text h2{
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: var(--normal-font);
+}
 
-                    <div class="service-box">
-                        <i class='bx bx-desktop service-icon'></i>
-                        <h3>Graphic Designer</h3>
-                        <p>
-                            I bring ideas to life with creative designs. From logos to ads, I create graphics that help brands stand out and connect with their audience effectively.
-                        </p>
-                        <div class="btn-box service-btn">
-                            <a href="service_3.html" class="btn">Read More</a>
-                        </div>
-                    </div>
+.main-text span{
+ color: #fdfdfd;
+ font-size: .8rem;
+ font-weight: 200;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+}
 
-        </div>
-    </section>
+.section-services{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    grid-gap:2rem;
+}
+
+.section-services .service-box{
+ flex: 1 1 18rem;
+ padding: 2rem 1rem 2rem;
+ text-align: center;
+ background: var(--secon-bg-color);
+ transition: transform .4s;
+ border-radius: 10px;
+}
+
+.service-btn{
+ width: auto;
+ justify-content: center;
+}
+
+.service-box:hover{
+ transform: translateY(-.7rem);
+ }
+
+ .service-icon{
+     border: 2px solid var(--hover-color);
+     padding: 2rem;
+     background: var(--bg-color);
+     display: flex;
+     align-items: center;
+     font-size: 3rem;
+     border-radius: 50%;
+     position:relative;
+     color: var(--hover-color);
+     box-shadow: var(--neon-box-shadow);
+     outline: 3px solid var(--bg-color);
+ }
+ .service-box h3{
+     margin-top: 10px;
+     font-size: 1.5rem;  
+ }
+
+ .service-box p{
+     margin: .5rem 0 1.5rem 0;
+     font-weight: 300;
+     letter-spacing: 1px;
+     color: #bdbdbd;
+     line-height: 1.6;
+ }
