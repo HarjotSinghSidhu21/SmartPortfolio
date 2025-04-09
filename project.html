@@ -413,6 +413,119 @@
         </div>
     </div>
     </section>
+    <!-- CONTACT US  -->
+    <section id="contact" class="contact">
+        <div class="main-text">
+            <span class="neon-text">LETS CONNECT</span>
+            <h2 class="neon-text">Contact Me</h2>
+        </div>
+    
+        <section id="contact-section" class="contact-section">
+            <div class="contact-container">
+                <h2 class="black">Contact Me</h2>
+                <p class="contact-description">Feel free to get in touch! You can reach me via:</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:aditya@gmail.com">aditya@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong>
+                        <a href="tel:6789876789">6789876789</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <!-- REVIEW SECTION -->
+     <section id="review" class="review">
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+       
+      <div class="container">
+        <h1>Portfolio Review</h1>
+    
+        <!-- Review Form -->
+        <div class="review-form">
+          <h2>Share Your Feedback</h2>
+    
+          <form id="review-form">
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3">
+              <label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1">★</label>
+            </div>
+
+            <textarea id="review-text" placeholder="Write your review here..." required></textarea>
+    
+            <input type="submit" value="Submit Review">
+          </form>
+        </div>
+    
+        <div class="reviews" id="reviews-container">
+          <h2>User Reviews</h2>
+        </div>
+    
+      </div>
+    
+      <script>
+        document.getElementById('review-form').addEventListener('submit', function (event) {
+          event.preventDefault();
+    
+      
+          const rating = document.querySelector('input[name="rating"]:checked');
+          const reviewText = document.getElementById('review-text').value;
+    
+          if (!rating || reviewText.trim() === '') {
+            alert('Please provide a rating and a review.');
+            return;
+          }
+    
+
+          const ratingValue = rating.value;
+
+          const reviewItem = document.createElement('div');
+          reviewItem.classList.add('review-item');
+    
+          reviewItem.innerHTML = `
+            <div class="rating">
+              ${'★'.repeat(ratingValue)}${'☆'.repeat(5 - ratingValue)}
+            </div>
+            <p class="username">Anonymous</p>
+            <p>${reviewText}</p>
+          `;
+    
+          document.getElementById('reviews-container').appendChild(reviewItem);
+    
+          document.getElementById('review-form').reset();
+          document.querySelector('input[name="rating"]:checked').checked = false;
+        });
+      </script>
+    
+</section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>Copyright &copy; 2024 || All Right Reserved.</p>
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </footer>
+
+
+<script src="skills.js"></script>
+<script src="mixitup.min.js"></script>
+<script src="script.js"></script>
+<script src="cv.js"></script>
+
+
+</body>
+</html>
 
 
 
